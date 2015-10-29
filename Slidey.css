@@ -1,0 +1,121 @@
+/*
+ * Slidey 0.1
+ *
+ * Creator: Gautham Yerroju
+ * Site: http://github.com/thegwiz/Slidey
+ * Date: 2015-10-30
+ */
+
+/* Styling for the drawer */
+.slidey {
+    box-sizing: border-box;
+
+    position: fixed;
+    top: 0;
+    z-index: 100;
+
+    width: 16em;
+    /*  Height more than 100% meeded because at 100%,
+        Chrome on Android doesn't render full height
+        when hiding the address bar */
+    height: 150%;
+    overflow-y: hidden;
+
+    padding: 1em;
+
+    transition: left 0.3s ease, right 0.3s ease;
+}
+
+/* Hidden state styling for left and right variants */
+.slidey.slidey--left {
+    left: -16em;
+    box-shadow: 0;
+}
+.slidey.slidey--right {
+    right: -16em;
+    box-shadow: 0;
+}
+
+/* Open state styling for left and right variants */
+.slidey.slidey--left.slidey--open {
+    left: 0;
+}
+.slidey.slidey--right.slidey--open {
+    right: 0;
+}
+
+/* Styling for the switch */
+.slidey__toggle {
+    position: fixed;
+    top: 1em;
+
+    width: 2em;
+    height: 2em;
+
+    transition: left 0.3s ease, right 0.3s ease;
+
+    /* Cosmetic stuff */
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Hidden state styling for left and right variants */
+.slidey.slidey--left > .slidey__toggle {
+    left: 1em;
+}
+.slidey.slidey--right > .slidey__toggle {
+    right: 1em;
+}
+
+/* Open state styling for left and right variants */
+.slidey.slidey--left.slidey--open > .slidey__toggle {
+    left: 17em;
+}
+.slidey.slidey--right.slidey--open > .slidey__toggle {
+    right: 17em;
+}
+
+/* Close button */
+.slidey > .slidey__close {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+
+    width: 1em;
+    height: 1em;
+
+    /* Cosmetic Stuff */
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Basic Styling, use .slidey--styled to turn on */
+
+.slidey.slidey--styled {
+    /* Basic Styling */
+    background-color: white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+
+    color: gray;
+    text-decoration: none;
+}
+
+.slidey.slidey--styled a {
+    display: block;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+
+    text-decoration: inherit;
+    color: inherit;
+    font-weight: bold;
+
+    text-indent: 1em;
+}
+.slidey.slidey--styled a:active {
+    color: black;
+}
+
+.slidey.slidey--styled .slidey__brand {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-indent: 0;
+}
