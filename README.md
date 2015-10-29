@@ -11,12 +11,12 @@ A simple slide-in navigation drawer for websites, built using CSS and triggered 
 
 Include the CSS in head:
 
-    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="Slidey.css">
 
 Include JS after jQuery:
 
     <!-- Include jQuery here -->
-    <script src="nav.js"></script>
+    <script src="Slidey.js"></script>
 
 Put this markup anywhere in the body (usually first thing in the body):
 
