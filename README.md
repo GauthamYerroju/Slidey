@@ -10,9 +10,11 @@ A simple slide-in navigation drawer for websites, built using CSS and triggered 
 ## Usage
 
 Include the CSS in head:
+
     <link rel="stylesheet" href="nav.css">
 
 Include JS after jQuery:
+
     <!-- Include jQuery here -->
     <script src="nav.js"></script>
 
