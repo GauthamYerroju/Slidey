@@ -49,5 +49,5 @@ Put this markup anywhere in the body (usually first thing in the body):
 
 ## Compatibility
 
-- Unknown, guessing IE8 and above. I am coding blind, so I can't gurantee support for old browser versions just yet.
+- Unknown, guessing IE8 and above. I am coding blind, so I can't guarantee support for old browser versions just yet.
 - Not using anything fancy so should be compatible with pretty much all modern browsers on all devices.
