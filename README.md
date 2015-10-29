@@ -1,4 +1,4 @@
-# Slide-in Navigation Drawer
+# Slidey
 
 A simple slide-in navigation drawer for websites, built using CSS and triggered using Javascript. Meant to only have one instance per page.
 
