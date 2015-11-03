@@ -38,9 +38,9 @@ Put this markup anywhere in the body (usually first thing in the body):
 - You MUST also add either the "slidey--left" or "slidey--right" modifier to the same element.
 - So far, you have applied the styles needed for the slider to work.
 - Optionally, you can also add the "slidey--styled" class to the same element to apply basic styling.
-- "slidey--styled" adds styles for anchor tags inside the slidey element. Additionally, any anchor tag with the class "slidey__brand" will make the text proominent and large.
-- Immediately inside the slidey element, you can optionally add an element with "slidey__toggle" which toggles the drawer. This element is positioned to look attached to the drawer.
-- Immediately inside the slidey element, you can optionally add an element with "slidey__close" which closes the drawer. This element is positioned in the top-right corner of the slidey element acting as a close button. Useful when the toggle goes off-screen in small screens.
+- "slidey--styled" adds styles for anchor tags inside the slidey element. Additionally, any anchor tag with the class "slidey__brand" will make the text prominent and large.
+- Immediately inside the slidey element, you can optionally add an element with the "slidey__toggle" class which toggles the drawer. This element is positioned to look attached to the drawer.
+- Immediately inside the slidey element, you can optionally add an element with the "slidey__close" class which closes the drawer. This element is positioned in the top-right corner of the slidey element acting as a close button. Useful when the toggle goes off-screen in small screens.
 
 ## Dependencies
 
