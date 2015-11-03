@@ -42,6 +42,7 @@
         <h2>Demo</h2>
         <button id="set-to-left">Set to left</button>
         <button id="set-to-right">Set to right</button>
+        <button id="toggle-styling">Toggle styling</button>
 
         <h2>Features</h2>
         <p>
@@ -117,6 +118,9 @@
         });
         $("#set-to-right").click(function() {
             $(".slidey").removeClass("slidey--left").addClass("slidey--right");
+        });
+        $("#toggle-styling").click(function() {
+            $(".slidey").toggleClass("slidey--styled");
         });
     </script>
 </body>
