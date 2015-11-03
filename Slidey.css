@@ -21,8 +21,6 @@
     height: 150%;
     overflow-y: hidden;
 
-    padding: 1em;
-
     transition: left 0.3s ease, right 0.3s ease;
 }
 
@@ -54,8 +52,11 @@
 
     transition: left 0.3s ease, right 0.3s ease;
 
-    /* Cosmetic stuff */
+    /* Cosmetic Stuff */
     background-color: rgba(0, 0, 0, 0.5);
+    background-image: url("Slidey__Toggle.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* Hidden state styling for left and right variants */
@@ -85,6 +86,10 @@
 
     /* Cosmetic Stuff */
     background-color: rgba(0, 0, 0, 0.5);
+    background-image: url("Slidey__Close.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
 }
 
 /* Basic Styling, use .slidey--styled to turn on */
@@ -100,8 +105,7 @@
 
 .slidey.slidey--styled a {
     display: block;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    padding: 0.5em 1em;
 
     text-decoration: inherit;
     color: inherit;
@@ -112,9 +116,15 @@
 .slidey.slidey--styled a:active {
     color: black;
 }
+.slidey.slidey--styled a:not(.slidey__brand):hover {
+    background-color: #DDD;
+    color: black;
+}
 
 .slidey.slidey--styled .slidey__brand {
     display: block;
+    padding: 0.5em 1em;
+
     font-size: 1.5em;
     font-weight: bold;
     text-indent: 0;
