@@ -1,6 +1,6 @@
 # Slidey
 
-A simple slide-in navigation drawer for websites, built using CSS and triggered using Javascript. Meant to only have one instance per page.
+A dead-simple slide-in navigation drawer for websites, built using CSS and triggered using Javascript. Meant to only have one instance per page.
 
 ## Features
 - Follows [BEM Syntax](https://css-tricks.com/bem-101/)
@@ -36,7 +36,7 @@ Put this markup anywhere in the body (usually first thing in the body):
 
 - To any container you want to convert to a slider, doesn't matter if it is nav or div, add the "slidey" class.
 - You MUST also add either the "slidey--left" or "slidey--right" modifier to the same element.
-- So far, you have applied the styles needed for teh slider to work.
+- So far, you have applied the styles needed for the slider to work.
 - Optionally, you can also add the "slidey--styled" class to the same element to apply basic styling.
 - "slidey--styled" adds styles for anchor tags inside the slidey element. Additionally, any anchor tag with the class "slidey__brand" will make the text proominent and large.
 - Immediately inside the slidey element, you can optionally add an element with "slidey__toggle" which toggles the drawer. This element is positioned to look attached to the drawer.
