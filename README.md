@@ -10,16 +10,20 @@ A dead-simple slide-in navigation drawer for websites, built using CSS and trigg
 ## Usage
 
 Include the CSS in head:
-
+```html
     <link rel="stylesheet" href="Slidey.css">
-
+```
 Include JS after jQuery:
 
+    
+```html
     <!-- Include jQuery here -->
     <script src="Slidey.js"></script>
+```
 
 Put this markup anywhere in the body (usually first thing in the body):
 
+```html    
     <nav class="slidey slidey--right slidey--styled">
         <a href="#" class="slidey__brand">Brand Name</a> <!-- Optional -->
         <a href="#">Menu Item 1</a>
@@ -31,6 +35,7 @@ Put this markup anywhere in the body (usually first thing in the body):
         <div class="slidey__toggle"></div> <!-- Optional -->
         <div class="slidey__close"></div> <!-- Optional -->
     </nav>
+```    
 
 ### Some notes about how to use the classes
 
