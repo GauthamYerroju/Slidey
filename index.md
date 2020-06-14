@@ -88,8 +88,8 @@ A dead-simple slide-in navigation drawer for websites, built using CSS and trigg
 - Unknown, guessing IE8 and above. I am coding blind, so I can't guarantee support for old browser versions just yet.
 - Not using anything fancy so should be compatible with pretty much all modern browsers on all devices.
 
-<script src="Slidey.js"></script>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="Slidey.js"></script>
 <script type="text/javascript">
     $("#set-to-left").click(function() {
         $(".slidey").removeClass("slidey--right").addClass("slidey--left");
