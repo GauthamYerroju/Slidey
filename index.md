@@ -5,7 +5,7 @@ title: Slidey CSS Drawer
 
 <link rel="stylesheet" href="Slidey.css">
 
-<nav class="slidey slidey--left slidey--styled">
+<nav id="slidey" class="slidey--left slidey--styled">
     <a href="#" class="slidey__brand">Brand Name</a> <!-- Optional -->
     <a href="#">Menu Item 1</a>
     <a href="#">Menu Item 2</a>
@@ -13,52 +13,64 @@ title: Slidey CSS Drawer
     <a href="#">Menu Item 4</a>
     <a href="#">Menu Item 5</a>
 
-    <div class="slidey__toggle"></div> <!-- Optional -->
-    <div class="slidey__close"></div> <!-- Optional -->
+    <div id="slidey__toggle"></div> <!-- Optional -->
+    <div id="slidey__close"></div> <!-- Optional -->
 </nav>
 
-# Slidey
+# Slidey Drawer
 
 A dead-simple slide-in navigation drawer for websites, built using CSS and triggered using Javascript.
 
 ## Demo
 
-<button id="set-to-left">Set to left</button>
-<button id="set-to-right">Set to right</button>
-<button id="toggle-styling">Toggle styling</button>
+<script type="text/javascript">
+    function moveToLeft() {
+        document.getElementById('slidey').classList.remove('slidey--right').add('slidey--left');
+    }
+    function moveToRight() {
+        document.getElementById('slidey').classList.remove('slidey--left').add('slidey--right');
+    }
+    function toggleDefaultStyle() {
+        document.getElementById('slidey').classList.toggle('slidey--styled');
+    }
+</script>
+<button onclick="moveToLeft">Move to left</button>
+<button onclick="moveToRight">Move to right</button>
+<button onclick="toggleDefaultStyle">Toggle default styling</button>
 
 ## Features
 
 - Follows [BEM Syntax](https://css-tricks.com/bem-101).
 - Comes with just the drawer, leaves the menu item styling to the user.
 - Optional default stying CSS available using class "slidey--styled" so you can build on it.
-- Designed to be used with only one instance per page.
+- Designed to be used with only one instance per page. Because if your website needs more than one global navigation drawer, you need to re-evaluate your life choices.
 
 ## Usage
 
 1. Include the CSS in head
 ```html
-&lt;link rel="stylesheet" href="Slidey.css"&gt;
+<link rel="stylesheet" href="Slidey.css">
 ```
 
 2. Include Javascript
 ```html
-&lt;script src="Slidey.js"&gt;&lt;/script&gt;
+<script src="Slidey.js"></script>
 ```
 
 3. Put this markup anywhere on the page
-```html
-&lt;nav class="slidey slidey--right slidey--styled"&gt;
-&lt;a href="#" class="slidey__brand"&gt;Brand Name&lt;/a&gt; &lt;!-- Optional --&gt;
-&lt;a href="#"&gt;Menu Item 1&lt;/a&gt;
-&lt;a href="#"&gt;Menu Item 2&lt;/a&gt;
-&lt;a href="#"&gt;Menu Item 3&lt;/a&gt;
-&lt;a href="#"&gt;Menu Item 4&lt;/a&gt;
-&lt;a href="#"&gt;Menu Item 5&lt;/a&gt;
 
-&lt;div class="slidey__toggle"&gt;&lt;/div&gt; &lt;!-- Optional --&gt;
-&lt;div class="slidey__close"&gt;&lt;/div&gt; &lt;!-- Optional --&gt;
-&lt;/nav&gt;
+```html
+<nav class="slidey slidey--right slidey--styled">
+<a href="#" class="slidey__brand">Brand Name</a> <!-- Optional -->
+<a href="#">Menu Item 1</a>
+<a href="#">Menu Item 2</a>
+<a href="#">Menu Item 3</a>
+<a href="#">Menu Item 4</a>
+<a href="#">Menu Item 5</a>
+
+<div class="slidey__toggle"></div> <!-- Optional -->
+<div class="slidey__close"></div> <!-- Optional -->
+</nav>
 ```
 
 ### How to use the CSS classes
@@ -66,7 +78,7 @@ A dead-simple slide-in navigation drawer for websites, built using CSS and trigg
 #### Mandatory Styling
 
 - To convert any container into a slider (ideally a nav element), add the ```slidey``` class.
-- Add either the ```slidey--left``` or ```slidey--right``` class to the same element. __This is mandatory__.
+- Add either the ```slidey--left``` or ```slidey--right``` class to the same element.
 
 #### Optional Styling
 
@@ -85,19 +97,7 @@ A dead-simple slide-in navigation drawer for websites, built using CSS and trigg
 
 ## Compatibility
 
-- Unknown, guessing IE8 and above. I am coding blind, so I can't guarantee support for old browser versions just yet.
-- Not using anything fancy so should be compatible with pretty much all modern browsers on all devices.
+- There are no niche CSS hacks, so this should work in most modern browsers on most platforms.
+- Not texted for legacy browser environments.
 
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="Slidey.js"></script>
-<script type="text/javascript">
-    $("#set-to-left").click(function() {
-        $(".slidey").removeClass("slidey--right").addClass("slidey--left");
-    });
-    $("#set-to-right").click(function() {
-        $(".slidey").removeClass("slidey--left").addClass("slidey--right");
-    });
-    $("#toggle-styling").click(function() {
-        $(".slidey").toggleClass("slidey--styled");
-    });
-</script>
