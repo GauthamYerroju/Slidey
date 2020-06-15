@@ -6,13 +6,19 @@
  */
 
 function toggleSlidey() {
-    document.getElementById('slidey').classList.toggle('slidey--open')
-}
-
-function openSlidey() {
-    document.getElementById('slidey').classList.add('slidey--open')
+    document.getElementById('slidey').classList.toggle('slidey--open');
 }
 
 function closeSlidey() {
-    document.getElementById('slidey').classList.remove('slidey--open')
+    document.getElementById('slidey').classList.remove('slidey--open');
+}
+
+window.onload = function() {
+    document.getElementById('slidey__toggle').addEventListener('click', function() {
+        toggleSlidey();
+    });
+
+    document.getElementById('slidey__close').addEventListener('click', function() {
+        closeSlidey();
+    });
 }

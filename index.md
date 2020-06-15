@@ -43,7 +43,7 @@ A dead-simple slide-in navigation drawer for websites, built using CSS and trigg
 - Follows [BEM Syntax](https://css-tricks.com/bem-101).
 - Comes with just the drawer, leaves the menu item styling to the user.
 - Optional default stying CSS available using class "slidey--styled" so you can build on it.
-- Designed to be used with only one instance per page. Because if your website needs more than one global navigation drawer, you need to re-evaluate your life choices.
+- Designed to be used with only one instance per page. Because if your website needs more than one global navigation drawer, you need to re-think your design.
 
 ## Usage
 
@@ -60,16 +60,16 @@ A dead-simple slide-in navigation drawer for websites, built using CSS and trigg
 3. Put this markup anywhere on the page
 
 ```html
-<nav class="slidey slidey--right slidey--styled">
-<a href="#" class="slidey__brand">Brand Name</a> <!-- Optional -->
-<a href="#">Menu Item 1</a>
-<a href="#">Menu Item 2</a>
-<a href="#">Menu Item 3</a>
-<a href="#">Menu Item 4</a>
-<a href="#">Menu Item 5</a>
+<nav id="slidey" class="slidey--left slidey--styled">
+    <a href="#" class="slidey__brand">Brand Name</a> <!-- Optional -->
+    <a href="#">Menu Item 1</a>
+    <a href="#">Menu Item 2</a>
+    <a href="#">Menu Item 3</a>
+    <a href="#">Menu Item 4</a>
+    <a href="#">Menu Item 5</a>
 
-<div class="slidey__toggle"></div> <!-- Optional -->
-<div class="slidey__close"></div> <!-- Optional -->
+    <div id="slidey__toggle"></div> <!-- Optional -->
+    <div id="slidey__close"></div> <!-- Optional -->
 </nav>
 ```
 
@@ -77,7 +77,7 @@ A dead-simple slide-in navigation drawer for websites, built using CSS and trigg
 
 #### Mandatory Styling
 
-- To convert any container into a slider (ideally a nav element), add the ```slidey``` class.
+- To convert any container into a slider (ideally a nav element), add the ```slidey``` id.
 - Add either the ```slidey--left``` or ```slidey--right``` class to the same element.
 
 #### Optional Styling
@@ -86,18 +86,17 @@ A dead-simple slide-in navigation drawer for websites, built using CSS and trigg
   - This adds styles for anchor tags inside the slidey element.
   - Additionally, any anchor tag with the class ```slidey__brand``` will make the text prominent and large.
 
-- Immediately inside the slidey element, add an element with the ```slidey__toggle``` class. Clicking this toggles the drawer.
-- Immediately inside the slidey element, add an element with the ```slidey__close``` class. Clicking this closes the drawer.
+- Immediately inside the slidey element, add an element with the ```slidey__toggle``` id. Clicking this toggles the drawer.
+- Immediately inside the slidey element, add an element with the ```slidey__close``` id. Clicking this closes the drawer.
   - This element is positioned in the top-right corner of the drawer.
 
 ## Dependencies
 
 - Some Javascript to toggle classes on clicks. Included in Slidey.js, modify as needed.
-- Browser supporting CSS transitions for the sliding animation. Menu still works on older browsers but toggles instantly.
 
 ## Compatibility
 
 - There are no niche CSS hacks, so this should work in most modern browsers on most platforms.
-- Not texted for legacy browser environments.
+- Not tested for legacy browser environments.
 
 <script src="Slidey.js"></script>
