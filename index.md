@@ -25,10 +25,12 @@ A dead-simple slide-in navigation drawer for websites, built using CSS and trigg
 
 <script type="text/javascript">
     function moveToLeft() {
-        document.getElementById('slidey').classList.remove('slidey--right').add('slidey--left');
+        document.getElementById('slidey').classList.remove('slidey--right');
+        document.getElementById('slidey').classList.add('slidey--left');
     }
     function moveToRight() {
-        document.getElementById('slidey').classList.remove('slidey--left').add('slidey--right');
+        document.getElementById('slidey').classList.remove('slidey--left');
+        document.getElementById('slidey').classList.add('slidey--right');
     }
     function toggleDefaultStyle() {
         document.getElementById('slidey').classList.toggle('slidey--styled');
