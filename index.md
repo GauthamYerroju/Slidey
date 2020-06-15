@@ -34,9 +34,9 @@ A dead-simple slide-in navigation drawer for websites, built using CSS and trigg
         document.getElementById('slidey').classList.toggle('slidey--styled');
     }
 </script>
-<button onclick="moveToLeft">Move to left</button>
-<button onclick="moveToRight">Move to right</button>
-<button onclick="toggleDefaultStyle">Toggle default styling</button>
+<button onclick="moveToLeft()">Move to left</button>
+<button onclick="moveToRight()">Move to right</button>
+<button onclick="toggleDefaultStyle()">Toggle default styling</button>
 
 ## Features
 
