@@ -1,16 +1,18 @@
 /*
- * Slidey 0.1
+ * Slidey 0.2
  *
- * Creator: Gautham Yerroju
- * Site: http://github.com/thegwiz/Slidey
- * Date: 2015-10-30
+ * Author: Gautham Yerroju
+ * GitHub: https://github.com/GauthamYerroju/Slidey
  */
 
- $(document).ready(function() {
-    $(".slidey__toggle").click(function() {
-        $(".slidey").toggleClass("slidey--open");
-    });
-    $(".slidey__close").click(function() {
-        $(".slidey").removeClass("slidey--open")
-    });
-});
+function toggleSlidey() {
+    document.getElementById('slidey').classList.toggle('slidey--open')
+}
+
+function openSlidey() {
+    document.getElementById('slidey').classList.add('slidey--open')
+}
+
+function closeSlidey() {
+    document.getElementById('slidey').classList.remove('slidey--open')
+}

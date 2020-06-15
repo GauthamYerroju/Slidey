@@ -5,7 +5,7 @@ title: Slidey CSS Drawer
 
 <link rel="stylesheet" href="Slidey.css">
 
-<nav class="slidey slidey--left slidey--styled">
+<nav id="slidey" class="slidey--left slidey--styled">
     <a href="#" class="slidey__brand">Brand Name</a> <!-- Optional -->
     <a href="#">Menu Item 1</a>
     <a href="#">Menu Item 2</a>
@@ -13,8 +13,8 @@ title: Slidey CSS Drawer
     <a href="#">Menu Item 4</a>
     <a href="#">Menu Item 5</a>
 
-    <div class="slidey__toggle"></div> <!-- Optional -->
-    <div class="slidey__close"></div> <!-- Optional -->
+    <div id="slidey__toggle"></div> <!-- Optional -->
+    <div id="slidey__close"></div> <!-- Optional -->
 </nav>
 
 # Slidey
@@ -23,16 +23,27 @@ A dead-simple slide-in navigation drawer for websites, built using CSS and trigg
 
 ## Demo
 
-<button id="set-to-left">Move to left</button>
-<button id="set-to-right">Move to right</button>
-<button id="toggle-styling">Toggle default styling</button>
+<script type="text/javascript">
+    function moveToLeft() {
+        document.getElementById('slidey').classList.remove('slidey--right').add('slidey--left');
+    }
+    function moveToRight() {
+        document.getElementById('slidey').classList.remove('slidey--left').add('slidey--right');
+    }
+    function toggleDefaultStyle() {
+        document.getElementById('slidey').classList.toggle('slidey--styled');
+    }
+</script>
+<button onclick="moveToLeft">Move to left</button>
+<button onclick="moveToRight">Move to right</button>
+<button onclick="toggleDefaultStyle">Toggle default styling</button>
 
 ## Features
 
 - Follows [BEM Syntax](https://css-tricks.com/bem-101).
 - Comes with just the drawer, leaves the menu item styling to the user.
 - Optional default stying CSS available using class "slidey--styled" so you can build on it.
-- Designed to be used with only one instance per page.
+- Designed to be used with only one instance per page. Because if your website needs more than one global navigation drawer, you need to re-evaluate your life choices.
 
 ## Usage
 
@@ -89,16 +100,4 @@ A dead-simple slide-in navigation drawer for websites, built using CSS and trigg
 - There are no niche CSS hacks, so this should work in most modern browsers on most platforms.
 - Not texted for legacy browser environments.
 
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="Slidey.js"></script>
-<script type="text/javascript">
-    $("#set-to-left").click(function() {
-        $(".slidey").removeClass("slidey--right").addClass("slidey--left");
-    });
-    $("#set-to-right").click(function() {
-        $(".slidey").removeClass("slidey--left").addClass("slidey--right");
-    });
-    $("#toggle-styling").click(function() {
-        $(".slidey").toggleClass("slidey--styled");
-    });
-</script>

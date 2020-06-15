@@ -1,13 +1,12 @@
 /*
- * Slidey 0.1
+ * Slidey 0.2
  *
- * Creator: Gautham Yerroju
- * Site: http://github.com/thegwiz/Slidey
- * Date: 2015-10-30
+ * Author: Gautham Yerroju
+ * GitHub: https://github.com/GauthamYerroju/Slidey
  */
 
 /* Styling for the drawer */
-.slidey {
+#slidey {
     box-sizing: border-box;
 
     position: fixed;
@@ -25,25 +24,25 @@
 }
 
 /* Hidden state styling for left and right variants */
-.slidey.slidey--left {
+#slidey.slidey--left {
     left: -16em;
     box-shadow: 0;
 }
-.slidey.slidey--right {
+#slidey.slidey--right {
     right: -16em;
     box-shadow: 0;
 }
 
 /* Open state styling for left and right variants */
-.slidey.slidey--left.slidey--open {
+#slidey.slidey--left.slidey--open {
     left: 0;
 }
-.slidey.slidey--right.slidey--open {
+#slidey.slidey--right.slidey--open {
     right: 0;
 }
 
 /* Styling for the switch */
-.slidey__toggle {
+#slidey__toggle {
     position: fixed;
     top: 1em;
 
@@ -60,23 +59,23 @@
 }
 
 /* Hidden state styling for left and right variants */
-.slidey.slidey--left > .slidey__toggle {
+#slidey.slidey--left > #slidey__toggle {
     left: 1em;
 }
-.slidey.slidey--right > .slidey__toggle {
+#slidey.slidey--right > #slidey__toggle {
     right: 1em;
 }
 
 /* Open state styling for left and right variants */
-.slidey.slidey--left.slidey--open > .slidey__toggle {
+#slidey.slidey--left.slidey--open > #slidey__toggle {
     left: 17em;
 }
-.slidey.slidey--right.slidey--open > .slidey__toggle {
+#slidey.slidey--right.slidey--open > #slidey__toggle {
     right: 17em;
 }
 
 /* Close button */
-.slidey > .slidey__close {
+#slidey__close {
     position: absolute;
     top: 0.5em;
     right: 0.5em;
@@ -94,7 +93,7 @@
 
 /* Basic Styling, use .slidey--styled to turn on */
 
-.slidey.slidey--styled {
+#slidey.slidey--styled {
     /* Basic Styling */
     background-color: white;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
@@ -103,7 +102,7 @@
     text-decoration: none;
 }
 
-.slidey.slidey--styled a {
+#slidey.slidey--styled a {
     display: block;
     padding: 0.5em 1em;
 
@@ -115,15 +114,15 @@
 
     text-indent: 1em;
 }
-.slidey.slidey--styled a:active {
+#slidey.slidey--styled a:active {
     color: black;
 }
-.slidey.slidey--styled a:not(.slidey__brand):hover {
+#slidey.slidey--styled a:not(.slidey__brand):hover {
     background-color: #DDD;
     color: black;
 }
 
-.slidey.slidey--styled .slidey__brand {
+#slidey.slidey--styled .slidey__brand {
     display: block;
     padding: 0.5em 1em;
 
