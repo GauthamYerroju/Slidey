@@ -53,12 +53,9 @@
 
     /* Cosmetic Stuff */
     background-color: rgba(0, 0, 0, 0.5);
+    background-image: url("Slidey__Toggle.png");
     background-repeat: no-repeat;
     background-position: center;
-}
-
-#slidey__toggle:before {
-    content: ">";
 }
 
 /* Hidden state styling for left and right variants */
