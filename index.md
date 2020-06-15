@@ -50,11 +50,13 @@ A dead-simple slide-in navigation drawer for websites, built using CSS and trigg
 ## Usage
 
 1. Include the CSS in head
+
 ```html
 <link rel="stylesheet" href="Slidey.css">
 ```
 
 2. Include Javascript
+
 ```html
 <script src="Slidey.js"></script>
 ```
